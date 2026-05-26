@@ -1,18 +1,31 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    if (typeof document === "undefined") {
+      return "light";
+    }
+
+    return document.documentElement.getAttribute("data-theme") || "light";
+  });
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    // Sync React state with the value loaded by the script in layout head
-    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
-    setTheme(currentTheme);
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 18);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const toggleTheme = () => {
@@ -31,14 +44,21 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
       <div className="container nav-container">
         <Link href="/" className="logo" onClick={() => setIsOpen(false)}>
-          Nexis Tech <span className="logo-dot"></span>
+          <span className="logo-mark" aria-hidden="true">
+            <span className="logo-mark-core" />
+            <span className="logo-mark-dot" />
+          </span>
+          <span className="logo-copy">
+            <strong>Nexis</strong>
+            <span>Tech Solutions</span>
+          </span>
         </Link>
 
-        <nav>
-          <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          <ul className="nav-links">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link
@@ -54,6 +74,9 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
+          <Link href="/contact" className="nav-cta">
+            Let&apos;s Talk
+          </Link>
           <button
             onClick={toggleTheme}
             className="theme-toggle"
@@ -100,6 +123,8 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className="mobile-nav-toggle"
             aria-label="Toggle Navigation Menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? (
               <svg
@@ -133,6 +158,39 @@ export default function Navbar() {
             )}
           </button>
         </div>
+
+        <AnimatePresence>
+          {isOpen ? (
+            <motion.nav
+              id="mobile-navigation"
+              className="mobile-nav-panel"
+              aria-label="Mobile navigation"
+              initial={{ opacity: 0, y: -14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+            >
+              <ul className="mobile-nav-links">
+                {navLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link
+                      href={link.path}
+                      className={`nav-link ${pathname === link.path ? "active" : ""}`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/contact" className="btn btn-primary mobile-nav-cta" onClick={() => setIsOpen(false)}>
+                    Start a Project
+                  </Link>
+                </li>
+              </ul>
+            </motion.nav>
+          ) : null}
+        </AnimatePresence>
       </div>
     </header>
   );

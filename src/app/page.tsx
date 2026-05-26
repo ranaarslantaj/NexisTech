@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import HeroSection from "@/components/Home/HeroSection";
 import Link from "next/link";
 
 export default function Home() {
@@ -8,72 +9,7 @@ export default function Home() {
       <Navbar />
       
       <main className="animate-fade-in">
-        {/* 1. Hero Section */}
-        <section className="section" style={{ padding: "120px 0 80px 0" }}>
-          <div className="container grid-2" style={{ alignItems: "center" }}>
-            <div>
-              <span className="section-subtitle">Nexis Tech Solutions</span>
-              <h1 style={{ lineHeight: "1.15", margin: "12px 0 24px 0" }}>
-                Creating Impact through Future-Ready Technology
-              </h1>
-              <p style={{ fontSize: "1.15rem", marginBottom: "32px", maxWidth: "540px" }}>
-                We specialize in engineering robust mobile applications, enterprise web portals, governance systems, and digital automation platforms tailored for modern organizations and government administrations.
-              </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-                <Link href="/contact" className="btn btn-primary">
-                  Get in Touch
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    style={{ width: "16px", height: "16px" }}
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12,5 19,12 12,19" />
-                  </svg>
-                </Link>
-                <Link href="/services" className="btn btn-secondary">
-                  Explore Services
-                </Link>
-              </div>
-            </div>
-            
-            <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
-              {/* Premium Abstract SVG Graphic representing digital connectivity */}
-              <svg
-                viewBox="0 0 400 400"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ width: "100%", maxWidth: "380px", height: "auto", opacity: "0.85" }}
-              >
-                <circle cx="200" cy="200" r="160" stroke="var(--border)" strokeWidth="1" strokeDasharray="4 4" />
-                <circle cx="200" cy="200" r="100" stroke="var(--border)" strokeWidth="1" />
-                <circle cx="200" cy="200" r="40" stroke="var(--accent)" strokeWidth="1.5" strokeDasharray="6 2" />
-                
-                {/* Floating nodes */}
-                <circle cx="120" cy="120" r="6" fill="var(--text-primary)" />
-                <line x1="200" y1="200" x2="120" y2="120" stroke="var(--border)" strokeWidth="1.5" />
-                
-                <circle cx="280" cy="150" r="8" fill="var(--accent)" />
-                <line x1="200" y1="200" x2="280" y2="150" stroke="var(--accent)" strokeWidth="1" />
-                
-                <circle cx="150" cy="280" r="5" fill="var(--text-secondary)" />
-                <line x1="200" y1="200" x2="150" y2="280" stroke="var(--border)" strokeWidth="1" />
-                
-                <circle cx="270" cy="270" r="7" fill="var(--text-primary)" />
-                <line x1="200" y1="200" x2="270" y2="270" stroke="var(--border)" strokeWidth="1.5" />
-                
-                {/* Center Core */}
-                <circle cx="200" cy="200" r="12" fill="var(--accent)" />
-                <circle cx="200" cy="200" r="6" fill="var(--surface)" />
-              </svg>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* 2. Project Spotlights (WeWatch & WeCare) */}
         <section className="section-alt">
@@ -292,7 +228,7 @@ export default function Home() {
                 gap: "50px",
                 alignItems: "center",
               }}
-              className="grid-2"
+              className="grid-2 ceo-message-card"
             >
               <div>
                 <span className="section-subtitle">Leadership</span>
@@ -350,7 +286,7 @@ export default function Home() {
         {/* 5. Contact CTA */}
         <section className="section" style={{ textAlign: "center" }}>
           <div className="container" style={{ maxWidth: "680px" }}>
-            <span className="section-subtitle">Let's Connect</span>
+            <span className="section-subtitle">Let&apos;s Connect</span>
             <h2 style={{ fontSize: "2.4rem", margin: "12px 0 20px 0" }}>Start Your Digital Transformation</h2>
             <p style={{ fontSize: "1.1rem", marginBottom: "32px" }}>
               Have an idea or a project in mind? Reach out to us for software development inquiries, technical audits, or digital solution partnerships.
