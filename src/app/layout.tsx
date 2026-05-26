@@ -21,6 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sansFont.variable}`} suppressHydrationWarning>
       <head>
+        <meta
+          name="google-site-verification"
+          content="d8sfqDlRFQ4uNhSWEI0v14bRx7VJkq9qISagFs3aFBQ"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -43,4 +47,3 @@ export default function RootLayout({
     </html>
   );
 }
-
