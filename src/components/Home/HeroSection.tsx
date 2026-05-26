@@ -5,15 +5,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const heroStats = [
-  { value: "12+", label: "Digital products delivered" },
-  { value: "24/7", label: "Support for mission-critical systems" },
-  { value: "GovTech", label: "Built for public and enterprise teams" },
+  { value: "12+", label: "Products delivered" },
+  { value: "24/7", label: "Long-term support" },
+  { value: "GovTech", label: "Enterprise + public sector" },
 ];
 
-const orbitCards = [
-  { title: "Web Platforms", text: "Scalable portals for modern operations.", className: "orbit-card orbit-card-top" },
-  { title: "Mobile Apps", text: "Field-ready apps with smooth user flows.", className: "orbit-card orbit-card-left" },
-  { title: "Live Dashboards", text: "Monitoring and governance visibility in real time.", className: "orbit-card orbit-card-right" },
+const servicePills = ["Enterprise Portals", "Mobile Apps", "Dashboards", "Automation"];
+
+const heroPanels = [
+  { label: "Premium UI direction", value: "Modern, polished interfaces with strong visual trust." },
+  { label: "Operational reliability", value: "Systems built for real adoption, not just presentation." },
 ];
 
 export default function HeroSection() {
@@ -35,17 +36,17 @@ export default function HeroSection() {
           <span className="hero-kicker">Nexis Tech Solutions</span>
           <div className="hero-badge">
             <span className="hero-badge-pulse" />
-            Future-ready systems for digital transformation
+            Premium digital solutions for modern organizations
           </div>
 
           <h1 className="hero-title">
-            Secure software experiences
-            <span className="hero-title-accent"> shaped around the Nexis vision.</span>
+            Premium digital products
+            <span className="hero-title-accent"> designed to elevate serious brands.</span>
           </h1>
 
           <p className="hero-description">
-            We design and engineer powerful mobile apps, enterprise portals, monitoring dashboards, and
-            governance platforms that look sharp, move smoothly, and stay dependable where performance matters.
+            Nexis delivers elegant web platforms, mobile products, dashboards, and automation systems for
+            teams that want refined design, dependable engineering, and a service experience that feels premium.
           </p>
 
           <div className="hero-actions">
@@ -66,8 +67,16 @@ export default function HeroSection() {
               </svg>
             </Link>
             <Link href="/projects" className="btn btn-secondary hero-secondary-btn">
-              See Our Work
+              View Portfolio
             </Link>
+          </div>
+
+          <div className="hero-service-pills">
+            {servicePills.map((pill) => (
+              <span key={pill} className="hero-service-pill">
+                {pill}
+              </span>
+            ))}
           </div>
 
           <div className="hero-stats">
@@ -95,49 +104,63 @@ export default function HeroSection() {
           <div className="hero-visual-shell">
             <motion.div
               className="hero-spotlight-card"
-              animate={{ y: [0, -10, 0], rotate: [0, 1.2, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             >
-              <div className="hero-logo-panel">
-                <div className="hero-logo-status">Brand-led product engineering</div>
-                <Image
-                  src="/images/logo/nexislogo.png"
-                  alt="Nexis Tech Solutions logo"
-                  width={540}
-                  height={300}
-                  className="hero-logo-image"
-                  priority
-                />
+              <div className="hero-card-header">
+                <div>
+                  <span className="hero-logo-status">Nexis Signature</span>
+                  <h3 className="hero-card-title">A premium service partner for product, operations, and growth.</h3>
+                </div>
+                <div className="hero-card-chip">Reliable</div>
               </div>
 
-              <div className="hero-signal-row">
-                <div className="hero-signal-card">
-                  <span>Build Speed</span>
-                  <strong>Fast iteration</strong>
+              <div className="hero-premium-media">
+                <div className="hero-dashboard-frame">
+                  <div className="hero-screen-bar">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <Image
+                    src="/images/site images/image1 (60).jpg"
+                    alt="Nexis dashboard interface preview"
+                    width={1024}
+                    height={768}
+                    className="hero-dashboard-image"
+                    priority
+                  />
                 </div>
-                <div className="hero-signal-card">
-                  <span>System Focus</span>
-                  <strong>Elegant + reliable</strong>
-                </div>
+
+                <motion.div
+                  className="hero-portrait-card"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Image
+                    src="/images/site images/image1 (53).png"
+                    alt="Customer success and service support visual"
+                    width={684}
+                    height={442}
+                    className="hero-portrait-image"
+                    priority
+                  />
+                  <div className="hero-portrait-copy">
+                    <span>Client-first delivery</span>
+                    <strong>Thoughtful service with modern execution.</strong>
+                  </div>
+                </motion.div>
+              </div>
+
+              <div className="hero-signal-row hero-panel-grid">
+                {heroPanels.map((panel) => (
+                  <div key={panel.label} className="hero-signal-card">
+                    <span>{panel.label}</span>
+                    <strong>{panel.value}</strong>
+                  </div>
+                ))}
               </div>
             </motion.div>
-
-            {orbitCards.map((card, index) => (
-              <motion.div
-                key={card.title}
-                className={card.className}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1, y: [0, index % 2 === 0 ? -8 : 8, 0] }}
-                transition={{
-                  opacity: { delay: 0.2 + index * 0.1, duration: 0.4 },
-                  scale: { delay: 0.2 + index * 0.1, duration: 0.4 },
-                  y: { duration: 6 + index, repeat: Infinity, ease: "easeInOut" },
-                }}
-              >
-                <span>{card.title}</span>
-                <p>{card.text}</p>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </div>
