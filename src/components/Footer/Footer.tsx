@@ -45,7 +45,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/privacy-policy" className="footer-link">
-                Privacy &amp; Policy
+                Privacy Policy
               </Link>
             </li>
           </ul>
@@ -154,7 +154,7 @@ export default function Footer() {
           </Link>{" "}
           |{" "}
           <Link href="/privacy-policy" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
-            Privacy &amp; Policy
+            Privacy Policy
           </Link>
         </div>
         <div className="footer-secp">
