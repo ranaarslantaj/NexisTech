@@ -21,118 +21,170 @@ const sections: Section[] = [
   {
     title: "1. Introduction",
     content:
-      "WeCare (Application) is a digital public service platform developed and managed by Nexis Tech Solutions (Private) Limited in collaboration with District Administration Vehari to facilitate citizen services, complaint management, public safety initiatives, and operational efficiency. Nexis Tech Solutions is committed to protecting the privacy, confidentiality, and security of all users. By downloading, accessing, or using the Application, you agree to the practices described in this Privacy Policy.",
+      "Nexis Tech Solutions (Private) Limited (\"Nexis Tech Solutions,\" \"Company,\" \"we,\" \"our,\" or \"us\") develops, manages, and operates digital solutions including mobile applications, web portals, dashboards, SaaS platforms, automation systems, WhatsApp API services, cloud-based systems, citizen service platforms, enterprise solutions, e-commerce systems, AI-powered applications, and other technology services for government departments, private organizations, businesses, institutions, and public-sector entities. We are committed to protecting the privacy, confidentiality, and security of all users, customers, clients, and stakeholders who interact with our platforms and services. By downloading, accessing, using, or interacting with any application, portal, dashboard, website, or service developed or operated by Nexis Tech Solutions (Private) Limited, you agree to the practices described in this Privacy Policy.",
   },
   {
     title: "2. Information We Collect",
     subsections: [
       {
         subtitle: "Personal Information",
+        content: "Depending on the nature of the service or platform, we may collect:",
         items: [
           "Full name",
           "Mobile number",
-          "CNIC (if required for specific government services)",
+          "CNIC, National ID, Passport Number, or Business Registration Information (where applicable)",
           "Email address",
-          "Residential address",
-          "Profile details",
+          "Residential or business address",
+          "Organization details",
+          "User profile information",
+          "Account credentials and login information",
         ],
       },
       {
         subtitle: "Location Data",
         content:
-          "The application may collect real-time geographic location to route complaints to the relevant municipal authority, enable accurate service delivery, improve emergency response, and provide location-based government services. Location data is collected only when necessary for service functionality.",
+          "Certain applications or services may collect real-time or approximate geographic location data to route complaints or service requests, enable location-based services, improve operational efficiency, support emergency response systems, and enhance logistics, tracking, mapping, or public service functionality. Location data is collected only when required for service functionality or user-approved features.",
       },
       {
         subtitle: "Device & Technical Information",
+        content: "We may automatically collect technical and diagnostic information including:",
         items: [
           "Device type",
           "Operating system",
-          "App version",
+          "Browser type",
+          "Application version",
           "IP address",
+          "Device identifiers",
           "Crash reports",
+          "Performance logs",
           "Usage analytics",
         ],
-        note: "This data helps us improve system reliability and performance.",
+        note: "This information helps improve security, reliability, performance, and user experience.",
       },
       {
-        subtitle: "Uploaded Content",
+        subtitle: "Uploaded Content & User Submissions",
+        content: "Users may submit or upload:",
         items: [
-          "Complaint details",
-          "Images",
-          "Documents",
+          "Complaints and feedback",
+          "Images and media files",
+          "Documents and attachments",
           "Service requests",
+          "Forms and application data",
+          "Messages and communication records",
         ],
       },
     ],
   },
   {
     title: "3. How We Use Your Information",
+    content: "We use collected information for purposes including:",
     items: [
-      "Processing complaints and service requests",
-      "Communicating status updates",
-      "Improving public service delivery",
-      "Enhancing application functionality",
-      "Maintaining system security",
-      "Generating anonymized statistical insights for administrative planning",
+      "Processing requests, complaints, or transactions",
+      "Delivering digital services and platform functionality",
+      "Providing customer support and communication",
+      "Improving system performance and user experience",
+      "Maintaining operational security and fraud prevention",
+      "Sending notifications, alerts, and updates",
+      "Generating anonymized analytics and statistical insights",
+      "Enabling integrations with authorized third-party systems",
+      "Complying with legal, regulatory, and contractual obligations",
     ],
-    highlight: "We do NOT sell, rent, or trade personal data.",
+    highlight: "We do NOT sell, rent, or trade personal information to unauthorized third parties.",
   },
   {
     title: "4. Data Sharing & Disclosure",
-    content:
-      "User data may be shared only with District Administration Vehari, authorized government departments, and law enforcement agencies when legally required. Data is never shared with unauthorized third parties for marketing or commercial purposes.",
+    content: "Information may be shared only with:",
+    items: [
+      "Authorized client organizations",
+      "Government departments or regulatory authorities",
+      "Service providers and technology partners",
+      "Cloud hosting and infrastructure providers",
+      "Law enforcement agencies when legally required",
+    ],
+    note: "Data is never shared with unauthorized parties for advertising, marketing, or unrelated commercial purposes.",
   },
   {
     title: "5. Data Ownership",
     content:
-      "All citizen and operational data collected through the WeCare platform is the property of District Administration Vehari. Nexis Tech Solutions (Private) Limited acts solely as the authorized technology provider and data processor, implementing strict safeguards to prevent unauthorized access.",
+      "Data ownership may vary depending on the nature of the project, service agreement, or client relationship. For custom-developed platforms, enterprise systems, or government solutions, operational and user data may remain the property of the respective client organization or authority. Nexis Tech Solutions (Private) Limited acts as an authorized technology provider, processor, developer, or system operator, implementing strict safeguards to protect data confidentiality and integrity.",
   },
   {
     title: "6. Data Security",
+    content: "We implement industry-standard security measures including:",
     items: [
       "Encrypted data transmission",
-      "Secure cloud infrastructure",
+      "Secure cloud and server infrastructure",
       "Role-based access controls",
-      "Continuous monitoring",
-      "Protection against unauthorized access",
+      "Authentication and authorization systems",
+      "Continuous monitoring and logging",
+      "Backup and disaster recovery measures",
+      "Protection against unauthorized access, misuse, or disclosure",
     ],
-    note: "While we strive for maximum security, no digital platform can guarantee absolute protection.",
+    note: "While we strive to maintain maximum security standards, no digital platform or online transmission method can guarantee absolute security.",
   },
   {
     title: "7. Data Retention",
-    content:
-      "Information is retained only for as long as necessary to fulfill operational requirements, comply with legal obligations, and support government record-keeping policies. Data may be securely deleted or anonymized when no longer required.",
+    content: "Information is retained only for as long as necessary to:",
+    items: [
+      "Fulfill operational or contractual requirements",
+      "Provide requested services",
+      "Comply with applicable laws and regulations",
+      "Support organizational record-keeping and auditing requirements",
+    ],
+    note: "Data may be securely deleted, archived, or anonymized when no longer required.",
   },
   {
     title: "8. Your Rights",
-    content: "Users may have the right to:",
+    content: "Depending on applicable laws and service arrangements, users may have the right to:",
     items: [
-      "Request access to their data",
-      "Request corrections",
-      "Update profile information",
-      "Request deletion (subject to government record requirements)",
+      "Request access to their personal data",
+      "Request correction or updates",
+      "Update account or profile information",
+      "Request deletion of personal data (subject to legal or contractual obligations)",
+      "Withdraw certain permissions where applicable",
     ],
-    note: "Requests can be submitted through official support channels listed below.",
+    note: "Requests may be submitted through official support channels.",
   },
   {
     title: "9. Children's Privacy",
     content:
-      "The WeCare application is not intended for children under the age of 13. We do not knowingly collect personal information from minors without appropriate authorization.",
+      "Our services are generally not intended for children under the age of 13 unless specifically designed for educational or authorized institutional purposes. We do not knowingly collect personal information from minors without appropriate consent or authorization.",
   },
   {
     title: "10. Third-Party Services",
-    content:
-      "The application may utilize trusted third-party services such as cloud hosting, mapping services, analytics providers, or notification platforms. These providers are contractually obligated to maintain confidentiality and data protection standards.",
+    content: "Our platforms may integrate or utilize trusted third-party services including:",
+    items: [
+      "Cloud hosting providers",
+      "Payment gateways",
+      "Mapping and geolocation services",
+      "Analytics platforms",
+      "Notification and messaging services",
+      "WhatsApp API providers",
+      "Authentication systems",
+      "AI or automation services",
+    ],
+    note: "Such providers are contractually or technically required to maintain confidentiality and appropriate data protection standards.",
   },
   {
     title: "11. Changes to This Privacy Policy",
-    content:
-      "This Privacy Policy may be updated periodically to reflect technological, legal, or operational changes. Users are encouraged to review it regularly. Continued use of the application constitutes acceptance of any updates.",
+    content: "This Privacy Policy may be updated periodically to reflect:",
+    items: [
+      "Technological advancements",
+      "Legal or regulatory requirements",
+      "Operational or service changes",
+      "Security improvements",
+    ],
+    note: "Users are encouraged to review this policy regularly. Continued use of our services constitutes acceptance of any updates or modifications.",
   },
   {
-    title: "13. Legal Basis & Compliance",
-    content:
-      "This policy is designed to align with applicable Pakistani laws and internationally recognized data protection principles, ensuring responsible handling of citizen information.",
+    title: "12. Legal Basis & Compliance",
+    content: "This Privacy Policy is designed to align with:",
+    items: [
+      "Applicable laws of Pakistan",
+      "Internationally recognized privacy and data protection principles",
+      "Industry-standard cybersecurity and compliance practices",
+    ],
+    note: "Nexis Tech Solutions (Private) Limited is committed to responsible, ethical, and secure handling of information across all sectors and projects.",
   },
 ];
 
@@ -421,7 +473,7 @@ export default function Privacy() {
                     paddingBottom: "12px",
                   }}
                 >
-                  12. Contact Information
+                  13. Contact Information
                 </h2>
                 <p
                   style={{
@@ -433,7 +485,7 @@ export default function Privacy() {
                   For questions, concerns, or privacy-related requests, please
                   contact:
                 </p>
-                <div style={{ marginBottom: "20px" }}>
+                <div>
                   <p
                     style={{
                       fontSize: "0.95rem",
@@ -450,7 +502,7 @@ export default function Privacy() {
                       marginBottom: "4px",
                     }}
                   >
-                    136-D, Vehari, Pakistan
+                    Vehari, Punjab, Pakistan
                   </p>
                   <p
                     style={{
@@ -459,7 +511,7 @@ export default function Privacy() {
                       marginBottom: "4px",
                     }}
                   >
-                    contact@nexistechsolutions.com
+                    Email: contact@nexistechsolutions.com
                   </p>
                   <p
                     style={{
@@ -467,31 +519,7 @@ export default function Privacy() {
                       color: "var(--text-secondary)",
                     }}
                   >
-                    +923007722777
-                  </p>
-                </div>
-                <div
-                  style={{
-                    borderTop: "1px solid var(--border)",
-                    paddingTop: "16px",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: "0.95rem",
-                      fontWeight: "600",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    District Administration Vehari
-                  </p>
-                  <p
-                    style={{
-                      fontSize: "0.9rem",
-                      color: "var(--text-secondary)",
-                    }}
-                  >
-                    +923334554854
+                    Phone: +92 300 7722777
                   </p>
                 </div>
               </div>
@@ -515,9 +543,12 @@ export default function Privacy() {
                   }}
                 >
                   <strong>Note:</strong> This Privacy Policy applies to all
-                  users of the WeCare application. Developed by Nexis Tech
-                  Solutions (Private) Limited in collaboration with District
-                  Administration Vehari.
+                  digital products, services, applications, dashboards, portals,
+                  websites, SaaS systems, WhatsApp API services, automation
+                  platforms, and technology solutions developed, operated,
+                  managed, or maintained by Nexis Tech Solutions (Private)
+                  Limited unless otherwise stated in a project-specific agreement
+                  or policy.
                 </p>
               </div>
             </div>

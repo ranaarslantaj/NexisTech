@@ -44,7 +44,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/privacy" className="footer-link">
+              <Link href="/privacy-policy" className="footer-link">
                 Privacy &amp; Policy
               </Link>
             </li>
@@ -153,7 +153,7 @@ export default function Footer() {
             Terms & Conditions
           </Link>{" "}
           |{" "}
-          <Link href="/privacy" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
+          <Link href="/privacy-policy" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
             Privacy &amp; Policy
           </Link>
         </div>
