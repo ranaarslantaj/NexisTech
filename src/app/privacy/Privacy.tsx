@@ -136,7 +136,7 @@ const sections: Section[] = [
   },
 ];
 
-export default function Privacy(): JSX.Element {
+export default function Privacy() {
   return (
     <>
       <Navbar />
