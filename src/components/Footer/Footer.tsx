@@ -43,6 +43,11 @@ export default function Footer() {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <Link href="/privacy" className="footer-link">
+                Privacy &amp; Policy
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -146,6 +151,10 @@ export default function Footer() {
           &copy; {currentYear} Nexis Tech Solutions (Private) Limited. All rights reserved. |{" "}
           <Link href="/terms" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
             Terms & Conditions
+          </Link>{" "}
+          |{" "}
+          <Link href="/privacy" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
+            Privacy &amp; Policy
           </Link>
         </div>
         <div className="footer-secp">
