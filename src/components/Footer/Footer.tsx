@@ -149,7 +149,7 @@ export default function Footer() {
       <div className="container footer-bottom">
         <div className="footer-copyright">
           &copy; {currentYear} Nexis Tech Solutions (Private) Limited. All rights reserved. |{" "}
-          <Link href="/terms" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
+          <Link href="/terms-and-conditions" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
             Terms & Conditions
           </Link>{" "}
           |{" "}
