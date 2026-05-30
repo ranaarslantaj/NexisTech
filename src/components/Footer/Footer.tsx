@@ -43,6 +43,16 @@ export default function Footer() {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <Link href="/privacy-policy" className="footer-link">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/delete-account" className="footer-link">
+                Account Deletion
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -144,8 +154,12 @@ export default function Footer() {
       <div className="container footer-bottom">
         <div className="footer-copyright">
           &copy; {currentYear} Nexis Tech Solutions (Private) Limited. All rights reserved. |{" "}
-          <Link href="/terms" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
+          <Link href="/terms-and-conditions" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
             Terms & Conditions
+          </Link>{" "}
+          |{" "}
+          <Link href="/privacy-policy" className="footer-link" style={{ fontSize: "0.88rem", textDecoration: "underline" }}>
+            Privacy Policy
           </Link>
         </div>
         <div className="footer-secp">

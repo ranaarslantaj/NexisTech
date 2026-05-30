@@ -26,6 +26,8 @@ export default function RootLayout({
           content="d8sfqDlRFQ4uNhSWEI0v14bRx7VJkq9qISagFs3aFBQ"
         />
         <script
+          id="theme-init"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
