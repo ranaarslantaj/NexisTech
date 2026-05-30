@@ -14,46 +14,53 @@ const sections: Section[] = [
   {
     title: "1. How to Delete Your Account",
     content:
-      "You can request account deletion directly from within the WeCare mobile application:",
+      "If the application includes an in-app account deletion feature:",
     steps: [
-      "Open the WeCare app.",
+      "Open the application.",
       "Sign in to your account.",
-      "Navigate to Profile.",
+      "Navigate to Profile or Account Settings.",
       "Select Delete Account.",
       "Confirm your deletion request.",
     ],
   },
   {
     title: "2. What Happens After Deletion?",
-    content: "When you request account deletion:",
+    content: "Upon receiving a valid deletion request:",
     items: [
-      "Your account will be deactivated immediately.",
-      "The account will remain recoverable for 30 days from the deletion request date.",
-      "During this period, you may restore your account by logging back into the application.",
-      "After the 30-day recovery period, your account and associated personal data will be permanently deleted from our active systems.",
+      "Your account will be deactivated or scheduled for deletion.",
+      "Where applicable, a recovery period may be provided before permanent deletion.",
+      "After the applicable retention period, your account and associated personal information will be permanently removed from active systems.",
     ],
-    highlight:
-      "You have 30 days to change your mind — simply log back in to restore your account.",
   },
   {
-    title: "3. Data Deleted",
-    content: "The following information may be permanently removed:",
+    title: "3. Data That May Be Deleted",
+    content: "The following information may be permanently deleted:",
     items: [
       "Full Name",
       "Email Address",
       "Mobile Number",
-      "CNIC (if provided)",
-      "Profile Photograph",
-      "Residential Address",
-      "User Profile Information",
+      "National Identification Information (where applicable)",
+      "Profile Photographs",
+      "Residential Address Information",
+      "User Preferences",
       "Authentication Credentials",
-      "Other personal information associated with your account",
+      "User-Generated Content associated with the account",
+      "Other personal information linked to the account",
     ],
   },
   {
     title: "4. Data Retention",
     content:
-      "Certain information may be retained for a limited period where required by applicable laws, regulations, government requirements, fraud prevention measures, security investigations, dispute resolution, or legal compliance obligations.",
+      "Certain information may be retained for a limited period where required for:",
+    items: [
+      "Legal and regulatory compliance",
+      "Government requirements",
+      "Fraud prevention and security investigations",
+      "Dispute resolution",
+      "Enforcement of terms and policies",
+      "Record-keeping obligations",
+    ],
+    note: "Any retained information will be handled in accordance with applicable laws and privacy requirements.",
   },
 ];
 
@@ -61,7 +68,8 @@ const supportFields: string[] = [
   "Full Name",
   "Registered Email Address",
   "Registered Mobile Number",
-  "Reason for Account Deletion (Optional)",
+  "Application Name (if applicable)",
+  "Reason for Deletion (Optional)",
 ];
 
 export default function WeCareAccountDeletion() {
@@ -83,13 +91,13 @@ export default function WeCareAccountDeletion() {
             className="container"
             style={{ maxWidth: "800px", textAlign: "center" }}
           >
-            <span className="section-subtitle">WeCare Account Deletion Policy</span>
+            <span className="section-subtitle">Account Deletion Policy</span>
             <h1 style={{ fontSize: "2.8rem", marginBottom: "16px" }}>
-              Delete Your WeCare Account
+              Delete Your Account
             </h1>
             <p style={{ fontSize: "1.1rem", margin: "0" }}>
-              At WeCare, we respect your privacy and provide users with the
-              ability to delete their account and associated personal
+              We are committed to protecting user privacy and providing users
+              with the ability to delete their account and associated personal
               information.
             </p>
           </div>
@@ -263,7 +271,7 @@ export default function WeCareAccountDeletion() {
                   )}
 
                   {/* Note */}
-                  {section.note && !section.highlight && (
+                  {section.note && (
                     <p
                       style={{
                         fontSize: "0.88rem",
@@ -279,7 +287,7 @@ export default function WeCareAccountDeletion() {
                 </div>
               ))}
 
-              {/* Unable to Access the App? — Support request */}
+              {/* Alternative Deletion Request — Support request */}
               <div
                 style={{
                   backgroundColor: "var(--surface)",
@@ -297,7 +305,7 @@ export default function WeCareAccountDeletion() {
                     paddingBottom: "12px",
                   }}
                 >
-                  5. Unable to Access the App?
+                  5. Alternative Deletion Request
                 </h2>
                 <p
                   style={{
@@ -307,8 +315,9 @@ export default function WeCareAccountDeletion() {
                     lineHeight: "1.7",
                   }}
                 >
-                  If you cannot access your account through the application, you
-                  may request account deletion by contacting our support team.
+                  If you are unable to access the application or your account,
+                  you may request account deletion by contacting our support
+                  team.
                 </p>
 
                 <div
@@ -345,7 +354,8 @@ export default function WeCareAccountDeletion() {
                     marginBottom: "16px",
                   }}
                 >
-                  Please include the following information in your email:
+                  To process an account deletion request submitted by email,
+                  please provide:
                 </p>
                 <ul
                   style={{
@@ -418,15 +428,20 @@ export default function WeCareAccountDeletion() {
                     lineHeight: "1.7",
                   }}
                 >
-                  <strong>Application:</strong> WeCare
-                  <br />
                   <strong>Developer:</strong> Nexis Tech Solutions (Private)
                   Limited
                   <br />
-                  <strong>Support Email:</strong>{" "}
+                  <strong>Contact Email:</strong>{" "}
                   <a href="mailto:info@nexistechsolutions.com">
                     info@nexistechsolutions.com
                   </a>
+                  <br />
+                  <br />
+                  This Account Deletion Policy applies to applications, websites,
+                  portals, dashboards, digital services, and software solutions
+                  developed, operated, or managed by Nexis Tech Solutions
+                  (Private) Limited unless a separate application-specific policy
+                  is provided.
                 </p>
               </div>
             </div>
